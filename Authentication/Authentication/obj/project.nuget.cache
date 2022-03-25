@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hxyl7XT9r5V9TTEmKm66g7dSoTBObm6mPVtNtiXtkddJ6wDei2pgT9gppLOTrj3LhoQ+eyuTfXo3M001hCiKEg==",
+  "dgSpecHash": "1Yxyaf1ofVsb01CcDCbMmKX4FAoWISJtug1qrMM8hwRyKMjoyFJvMNKMWtypJAVCxapqCXFsfZ25x+lem2Ux4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alec\\Desktop\\API\\JwtWebApi\\JwtWebApi\\JwtWebApi.csproj",
+  "projectFilePath": "C:\\Users\\alec\\Desktop\\API\\Authentication\\Authentication\\Authentication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alec\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\alec\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
