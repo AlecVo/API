@@ -494,11 +494,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alec\\Desktop\\Api\\JwtWebApi\\JwtWebApi\\JwtWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\alec\\Desktop\\API\\JwtWebApi\\JwtWebApi\\JwtWebApi.csproj",
       "projectName": "JwtWebApi",
-      "projectPath": "C:\\Users\\alec\\Desktop\\Api\\JwtWebApi\\JwtWebApi\\JwtWebApi.csproj",
+      "projectPath": "C:\\Users\\alec\\Desktop\\API\\JwtWebApi\\JwtWebApi\\JwtWebApi.csproj",
       "packagesPath": "C:\\Users\\alec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alec\\Desktop\\Api\\JwtWebApi\\JwtWebApi\\obj\\",
+      "outputPath": "C:\\Users\\alec\\Desktop\\API\\JwtWebApi\\JwtWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alec\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -558,7 +558,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alec\\Desktop\\Api\\SuperHero\\SuperHero\\SuperHero.csproj": {}
+    "C:\\Users\\alec\\Desktop\\API\\SuperHero\\SuperHero\\SuperHero.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alec\\Desktop\\Api\\SuperHero\\SuperHero\\SuperHero.csproj": {
+    "C:\\Users\\alec\\Desktop\\API\\SuperHero\\SuperHero\\SuperHero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alec\\Desktop\\Api\\SuperHero\\SuperHero\\SuperHero.csproj",
+        "projectUniqueName": "C:\\Users\\alec\\Desktop\\API\\SuperHero\\SuperHero\\SuperHero.csproj",
         "projectName": "SuperHero",
-        "projectPath": "C:\\Users\\alec\\Desktop\\Api\\SuperHero\\SuperHero\\SuperHero.csproj",
+        "projectPath": "C:\\Users\\alec\\Desktop\\API\\SuperHero\\SuperHero\\SuperHero.csproj",
         "packagesPath": "C:\\Users\\alec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alec\\Desktop\\Api\\SuperHero\\SuperHero\\obj\\",
+        "outputPath": "C:\\Users\\alec\\Desktop\\API\\SuperHero\\SuperHero\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alec\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -63,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
