@@ -19,7 +19,7 @@ namespace EncryptieAPI.Controllers
 
         public ActionResult<Berichten> OphalenEncryptedMessage(Guid Id)
         {
-            Berichten berichten;
+            dbContext.
             //Ophalen bericht
             //Gegevens van het bericht invullen
             berichten.(b => b.id == Id && b.isVervalt = false)
@@ -29,10 +29,19 @@ namespace EncryptieAPI.Controllers
             bericht.id = Id;
             bericht.aanmaakDatum = DateTime.Now;
             bericht.encryptedBericht =
+        }
 
+        [HttpPost("Opslaan bericht")]
 
-
-
+        public ActionResult<Berichten> AddBericht(Guid Id)
+        {
+            var bericht = new Berichten()
+            {
+                id = Id,
+                aanmaakDatum = DateTime.Now,
+                vervalDatum = DateTime.Now,
+                encryptedBericht = 
+            }
         }
 
     }

@@ -6,7 +6,9 @@ namespace EncryptieAPI.Data
     {
         public EncryptieDbContext(DbContextOptions options) : base(options)
         {
+            Public Bericht {
 
+            }
         }
     }
 }
