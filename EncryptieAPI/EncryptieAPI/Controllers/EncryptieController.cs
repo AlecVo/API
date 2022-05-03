@@ -40,9 +40,6 @@ namespace EncryptieAPI.Controllers
                 return Ok(bericht); // bericht tonen
                
             }
-            
-
-
 
         }
         [HttpGet("Testen code")]
