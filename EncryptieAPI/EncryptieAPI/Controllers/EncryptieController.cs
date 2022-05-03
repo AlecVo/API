@@ -35,9 +35,10 @@ namespace EncryptieAPI.Controllers
             }
             else
             {
-                return Ok(bericht); // bericht tonen
                 _dbContext.Berichten.Remove(bericht);
                 await _dbContext.SaveChangesAsync();
+                return Ok(bericht); // bericht tonen
+               
             }
             
 
