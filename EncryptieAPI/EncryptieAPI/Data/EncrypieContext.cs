@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EncryptieAPI.Data
 {
-    public class EncryptieDbContext : DbContext
+    public class EncrypieContext : DbContext
     {
-        public EncryptieDbContext(DbContextOptions options) : base(options) { }
+        public EncrypieContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Bericht> Berichten { get; set; }
     }

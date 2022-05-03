@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EncryptieAPI.Migrations
 {
-    [DbContext(typeof(EncryptieDbContext))]
+    [DbContext(typeof(EncrypieContext))]
     [Migration("20220503090253_CreateInitial")]
     partial class CreateInitial
     {

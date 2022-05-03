@@ -9,6 +9,12 @@ namespace EncryptieAPI.Controllers
     [ApiController]
     public class EncryptieController : ControllerBase
     {
+        private readonly EncrypieContext _dbConext;
+        public EncryptieController(EncrypieContext dbContext)
+        {
+            _dbConext = dbContext;
+        }
+        //hierdoor kunnen we gebruik maken van de database
         private static List<Bericht> berichten = new List<Bericht>
         {
             new Bericht
@@ -33,7 +39,7 @@ namespace EncryptieAPI.Controllers
         [HttpGet("Testen code")]
         public async Task<ActionResult<List<Bericht>>> Get()
         {
-            return Ok(berichten);
+            return Ok(await _dbConext.Berichten.ToListAsync());
         }
 
     }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EncryptieAPI.Migrations
 {
-    [DbContext(typeof(EncryptieDbContext))]
+    [DbContext(typeof(EncrypieContext))]
     partial class EncryptieDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
