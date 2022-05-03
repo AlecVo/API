@@ -25,3 +25,6 @@ C:\Users\alec\Desktop\API\EncryptieAPI\EncryptieAPI\obj\Debug\net6.0\refint\Encr
 C:\Users\alec\Desktop\API\EncryptieAPI\EncryptieAPI\obj\Debug\net6.0\EncryptieAPI.pdb
 C:\Users\alec\Desktop\API\EncryptieAPI\EncryptieAPI\obj\Debug\net6.0\EncryptieAPI.genruntimeconfig.cache
 C:\Users\alec\Desktop\API\EncryptieAPI\EncryptieAPI\obj\Debug\net6.0\ref\EncryptieAPI.dll
+C:\Users\alec\Desktop\API\EncryptieAPI\EncryptieAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\alec\Desktop\API\EncryptieAPI\EncryptieAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\alec\Desktop\API\EncryptieAPI\EncryptieAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

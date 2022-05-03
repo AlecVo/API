@@ -9,39 +9,19 @@ namespace EncryptieAPI.Controllers
     [ApiController]
     public class EncryptieController : ControllerBase
     {
-        private readonly EncryptieDbContext dbContext;
-        public EncryptieController(EncryptieDbContext dbContext)
-        {
-            this.dbContext = dbContext;
-        }
-
-        [HttpPost("Ophalen bericht")]
-
-        public ActionResult<Berichten> OphalenEncryptedMessage(Guid Id)
-        {
-            dbContext.
-            //Ophalen bericht
-            //Gegevens van het bericht invullen
-            berichten.(b => b.id == Id && b.isVervalt = false)
-            {
-
-            }
-            bericht.id = Id;
-            bericht.aanmaakDatum = DateTime.Now;
-            bericht.encryptedBericht =
-        }
 
         [HttpPost("Opslaan bericht")]
 
-        public ActionResult<Berichten> AddBericht(Guid Id)
+        public async Task<ActionResult<List<Bericht>>> AddBericht()
         {
-            var bericht = new Berichten()
-            {
-                id = Id,
-                aanmaakDatum = DateTime.Now,
-                vervalDatum = DateTime.Now,
-                encryptedBericht = 
-            }
+            var bericht = new List<Bericht>
+            { 
+                new Bericht
+                {
+
+                }
+            };
+            return Ok(bericht);
         }
 
     }

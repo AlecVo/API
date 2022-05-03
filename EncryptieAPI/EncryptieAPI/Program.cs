@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext(EncryptieDbContext)
+//builder.Services.AddDbContext(EncryptieDbContext);
 
 var app = builder.Build();
 
