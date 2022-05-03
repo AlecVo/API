@@ -9,39 +9,43 @@ namespace EncryptieAPI.Controllers
     [ApiController]
     public class EncryptieController : ControllerBase
     {
-        private readonly EncryptieDbContext dbContext;
-        public EncryptieController(EncryptieDbContext dbContext)
+        private readonly EncrypieContext _dbContext;
+        public EncryptieController(EncrypieContext dbContext)
         {
-            this.dbContext = dbContext;
-        }
-
-        [HttpPost("Ophalen bericht")]
-
-        public ActionResult<Berichten> OphalenEncryptedMessage(Guid Id)
-        {
-            dbContext.
-            //Ophalen bericht
-            //Gegevens van het bericht invullen
-            berichten.(b => b.id == Id && b.isVervalt = false)
-            {
-
-            }
-            bericht.id = Id;
-            bericht.aanmaakDatum = DateTime.Now;
-            bericht.encryptedBericht =
+            _dbContext = dbContext;
         }
 
         [HttpPost("Opslaan bericht")]
 
-        public ActionResult<Berichten> AddBericht(Guid Id)
+        public async Task<ActionResult<List<Bericht>>> AddBericht(Bericht bericht)
         {
-            var bericht = new Berichten()
+            _dbContext.Berichten.Add(bericht);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(await _dbContext.Berichten.ToListAsync());
+        }
+
+        [HttpPost("Testen code")]
+        public async Task<ActionResult<Bericht>> OphalenBericht(Guid id)
+        {
+            var bericht = await _dbContext.Berichten.FindAsync(id); //gaat zoeken in de database met hetzelfde id dat opgegeven is
+            if (bericht == null)
             {
-                id = Id,
-                aanmaakDatum = DateTime.Now,
-                vervalDatum = DateTime.Now,
-                encryptedBericht = 
+                return BadRequest("Het bericht met dat id bestaat niet"); //alsz het bericht niet bestaat return foutmelding
             }
+            else
+            {
+                _dbContext.Berichten.Remove(bericht);
+                await _dbContext.SaveChangesAsync();
+                return Ok(bericht); // bericht tonen
+               
+            }
+
+        }
+        [HttpGet("Testen code")]
+        public async Task<ActionResult<Bericht>> OphalenBerichtenLijst()
+        {
+            return Ok(await _dbContext.Berichten.ToListAsync());
         }
 
     }
