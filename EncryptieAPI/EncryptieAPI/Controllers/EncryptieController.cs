@@ -19,10 +19,10 @@ namespace EncryptieAPI.Controllers
 
         public async Task<ActionResult<List<Bericht>>> AddBericht(Bericht bericht)
         {
-            _dbContext.Berichten.Add(bericht);
-            await _dbContext.SaveChangesAsync();
+            _dbContext.Berichten.Add(bericht); //gaat berichten toevoegen in de database
+            await _dbContext.SaveChangesAsync(); //gaat berichten opslaan in database
 
-            return Ok(await _dbContext.Berichten.ToListAsync());
+            return Ok(await _dbContext.Berichten.ToListAsync()); //gaat berichten tonen
         }
 
         [HttpPost("Testen code")]
@@ -31,7 +31,7 @@ namespace EncryptieAPI.Controllers
             var bericht = await _dbContext.Berichten.FindAsync(id); //gaat zoeken in de database met hetzelfde id dat opgegeven is
             if (bericht == null)
             {
-                return BadRequest("Het bericht met dat id bestaat niet"); //alsz het bericht niet bestaat return foutmelding
+                return BadRequest("Het bericht met dat id bestaat niet"); //als het bericht niet bestaat return foutmelding
             }
             else
             {
@@ -45,7 +45,7 @@ namespace EncryptieAPI.Controllers
         [HttpGet("Testen code")]
         public async Task<ActionResult<Bericht>> OphalenBerichtenLijst()
         {
-            return Ok(await _dbContext.Berichten.ToListAsync());
+            return Ok(await _dbContext.Berichten.ToListAsync());//ophalen lijst van berichten
         }
 
     }
