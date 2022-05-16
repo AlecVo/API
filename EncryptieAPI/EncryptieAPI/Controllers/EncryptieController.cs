@@ -2,12 +2,14 @@
 using EncryptieAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Umbraco.Cms.Web.Common.Attributes.PluginController;
+inherit UmbracoAuthorizedApiController;
 
 namespace EncryptieAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EncryptieController : ControllerBase
+    public class EncryptieController : ControllerBase, UmbracoApiController
     {
         private readonly EncrypieContext _dbContext;
         public EncryptieController(EncrypieContext dbContext)
@@ -25,7 +27,7 @@ namespace EncryptieAPI.Controllers
             return Ok(await _dbContext.Berichten.ToListAsync()); //gaat berichten tonen
         }
 
-        [HttpPost("Testen code")]
+        [HttpPost("Ophalen op id en verwijderen")]
         public async Task<ActionResult<Bericht>> OphalenBericht(Guid id)
         {
             var bericht = await _dbContext.Berichten.FindAsync(id); //gaat zoeken in de database met hetzelfde id dat opgegeven is
