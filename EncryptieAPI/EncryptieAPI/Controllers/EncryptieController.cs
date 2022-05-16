@@ -2,8 +2,9 @@
 using EncryptieAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Umbraco.Cms.Web.Common.Attributes.PluginController;
-inherit UmbracoAuthorizedApiController;
+using Microsoft.AspNetCore.Mvc.Routing;// in de umbraco documentation staat Route
+inherit Umbraco.Cms.Web.Common.Controllers.UmbracoApiController;
+//inherit UmbracoAuthorizedApiController; is voor als men de api gaat gebruiken voor de umbraco backoffice : is niet van toepassing.
 
 namespace EncryptieAPI.Controllers
 {
